@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %}
+	<div class="table-responsive-md">
+		<table class="table table-striped table-hover" style="50%">
+			<!-- 			
+			回傳 DataFrame 
+			columns:['title', 'content', 'url', 'jeiba', 'summary1'] 
+			再新增兩欄 time, topic
+			 -->
+			<thead>			
+				<tr>
+					<!-- <th>title</th> -->
+					<!-- <th>content</th> -->
+					<!-- <th>time</th> -->
+					<!-- <th>url</th> -->
+					<!-- <th>topic</th> -->
+					<!-- <th>jieba斷詞(預定更該為文字雲顯示)</th> -->
+					<th>摘要</th>
+				</tr>
+			</thead>
+			<!-- 塞資料處 -->
+			{% for i, r in summary.iterrows %}
+			<tbody>
+				<tr>
+					<!-- <td>{{r.title}}</td> -->
+					<!-- <td>{{r.content}}</td> -->
+					<!-- <td>{{r.time}}</td> -->
+					<!-- <td>{{r.url}}</td> -->
+					<!-- <td>{{r.topic}}</td> -->
+					<!-- <td>{{r.jieba}}</td> -->
+					<td>{{r.summary1}}</td>
+				</tr>
+			</tbody>
+			{% endfor %}
+		</table>
+	</div>
+{% endblock %}
